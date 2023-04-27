@@ -1,0 +1,19 @@
+<router-outlet></router-outlet>
+<p>Lista de cursos</p>
+ <table>
+    <tr>
+        <td>id</td>
+        <td>dni</td>
+        <td>nombre</td>
+        <td>horas</td>
+    </tr>
+    <tr *ngFor="let alumno of alumnos">
+        <td>{{alumno.id}}</td>
+        <td>{{alumno.dni}}</td>
+        <td>{{alumno.nombre}}</td>
+        <td>{{alumno.horas}}</td>
+        <button [routerLink]="['/modificar', alumno.id]">Modificar</button>
+    </tr>
+</table>
+
+<button [routerLink]="['alta']" >Alta</button>
